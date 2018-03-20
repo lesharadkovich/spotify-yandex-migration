@@ -1,0 +1,25 @@
+<div class="main-wrapper">
+
+	<!-- <h3>Spotify playlist tracks</h3> -->
+	<div class="spotify-playlist-tracks">
+		<div class="track" *ngFor="let playlist of playlists">
+			<img src="{{playlist.image}}">
+
+			<div class="name">
+				<span class="title">{{playlist.name}}</span>
+				<!-- <span class="artist">{{playlists.artist}}</span> -->
+			</div>
+		</div>
+	</div>
+
+	<div class="spotify-playlist-tracks">
+		<div class="track" *ngFor="let track of tracks">
+			<img src="{{track.image}}">
+
+			<div class="name">
+				<span class="title">{{track.name}}</span>
+				<span class="artist">{{track.artist}}</span>
+			</div>
+		</div>
+	</div>
+</div>

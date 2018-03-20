@@ -1,0 +1,47 @@
+.main-wrapper {
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: space-around;
+	width: 100%;
+	height: 100%;
+	/* padding: 10px; */
+}
+
+.spotify-playlist-tracks {
+	padding: 10px;
+	margin-top: 10px;
+	border: 1px solid rgb(90, 90, 90);
+	border-radius: 2px;
+
+	width: 40%;
+	height: 50%;
+	overflow: auto;
+}
+
+.track {
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+}
+
+.track img {
+	border-radius: 50%; 
+	margin-right: 10px;
+}
+
+.track .name {
+	display: flex;
+	flex-direction: column;
+}
+
+.track .name .title {
+	/* display: flex;
+	flex-direction: column; */
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.track .name .artist {
+	font-size: 12px;
+}

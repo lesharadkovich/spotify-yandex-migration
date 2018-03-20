@@ -1,0 +1,147 @@
+header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: #333;
+	height: 40px;
+}
+
+#logout {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	margin-right: 10px;
+	padding: 0 10px;
+	color: #fff;
+}
+
+#logout:hover {
+	transition: 0.5s;
+	color: rgb(75, 58, 58);
+	background-color: #fff;
+	cursor: pointer;
+}
+
+#main-wrapper, #content-wrapper {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+#main-wrapper {
+	flex-direction: column;
+}
+
+#left-menu {
+	width: 220px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	border-right: 1px solid #cecece;
+	/* background-color: #e8e8e8; */
+}
+
+.name, .user, .center-wrapper header {
+	flex-shrink: 0;
+}
+
+.name {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #3e3e3e;
+}
+
+.border {
+	border-bottom: 2px solid #c2c2c2;
+	width: 100%;
+}
+
+.logo {
+	cursor: pointer;
+	margin: 5px 0;
+}
+
+.user {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 80px;
+
+	background-color: #817f7f;
+	color: white;
+}
+
+.user span {
+	font-size: 25px;
+	color: #000;
+}
+/* .user-wrapper span:last-child {
+	font-size: 14px;
+} */
+
+.menu {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px; 
+	/* height: 100%; */
+}
+
+/* .menu-buttons {
+	margin-top: 30px;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+.menu-buttons button {
+	margin-top: 15px;
+}
+
+.footer {
+	height: 50px;
+	background-color: #109bf9;
+} */
+  
+
+/* .mat-raised-button.mat-primary {
+	background-color: #f5f5f5 !important;
+} */
+  
+  /* ----------------------------------------- */
+.center-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	background-color: #f7f9fb;
+}
+
+
+#loading {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+
+	position: absolute;
+	/* top: 0;
+	left: 0; */
+	z-index: 999;
+}
+
+/* .mat-raised-button {
+	color: #fff;
+	background-color: #817F7F;
+}
+
+.mat-raised-button:hover {
+	color: #fff;
+	background-color: #696767;
+	transition: 0.3s;
+} */
