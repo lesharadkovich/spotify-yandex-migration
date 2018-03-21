@@ -8,10 +8,10 @@ const cors = require('cors');
 const passport = require('passport');
 const config = require('../config');
 
-
 const SpotifyWebApi = require('spotify-web-api-node');
 const clientId = 'a3ae92cd46654ffdb8fa32e7aac2a3e9';
 const clientSecret = '01a70f9954cb40958e149f7408295b24';
+const redirectUri = 'http://localhost:3000/spotify/callback';
 
 const app = express();
 
@@ -20,19 +20,20 @@ const app = express();
 	// Create the api object with the credentials
 	let spotifyApi = new SpotifyWebApi({
 		clientId: clientId,
+		redirectUri : redirectUri,
 		clientSecret: clientSecret
 	});
 
 	// Retrieve an access token.
-	let data = await spotifyApi.clientCredentialsGrant()
-	console.log('The access token expires in ' + data.body['expires_in']);
-	console.log('The access token is ' + data.body['access_token']);
+	// let data = await spotifyApi.clientCredentialsGrant()
+	// console.log('The access token expires in ' + data.body['expires_in']);
+	// console.log('The access token is ' + data.body['access_token']);
 
-	// Save the access token so that it's used in future calls
-	spotifyApi.setAccessToken(data.body['access_token']);
+	// // Save the access token so that it's used in future calls
+	// spotifyApi.setAccessToken(data.body['access_token']);
 
 
-	app.use(cors());
+	// app.use(cors());
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({ extended: false }));
 	app.use(cookieParser());

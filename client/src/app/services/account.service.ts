@@ -13,8 +13,9 @@ export class AccountService {
 	}
 
 
-	getSpotifyPlaylistTracks() {
-        return this.http.get('/spotify/get-playlist-tracks').toPromise().then((res) => {
+	getSpotifyPlaylistTracks(id: string, tracksAmount: any) {
+        console.log(tracksAmount)
+        return this.http.get(`/spotify/get-playlist-tracks?id=${id}&total=${tracksAmount}`).toPromise().then((res) => {
             return res.json()
         });
 	}
@@ -23,5 +24,17 @@ export class AccountService {
         return this.http.get('/spotify/get-playlists').toPromise().then((res) => {
             return res.json()
         });
-	}
+    }
+    
+    auth() {
+        return this.http.get('/spotify/auth').toPromise().then((res) => {
+            return res.json()
+        });
+    }
+
+    getUser() {
+        return this.http.get('/spotify/user').toPromise().then((res) => {
+            return res.json()
+        });
+    }
 }
